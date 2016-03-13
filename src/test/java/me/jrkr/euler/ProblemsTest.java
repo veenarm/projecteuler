@@ -15,6 +15,7 @@ public class ProblemsTest {
         Assert.assertEquals(4613732, new Problem2().result);
         // problem 3 not solved
         Assert.assertEquals(232792560, new Problem5().result);
+        Assert.assertEquals(25164150, new Problem6().result);
         try {
             Assert.assertEquals("5537376230", new Problem13().stringResult);
         } catch (IOException ioe) {
