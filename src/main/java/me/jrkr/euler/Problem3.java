@@ -1,8 +1,6 @@
 package me.jrkr.euler;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Problem3 extends BaseProblem {
 
