@@ -11,24 +11,8 @@ import java.util.stream.IntStream;
 public class Problem1 extends BaseProblem {
 
     public Problem1() {
-        doOldWay();
-        doNewWay();
-    }
-
-    // Java 8 - Streams/Lambdas
-    private void doNewWay() {
         result = IntStream.range(1, 1000).filter(i -> (i % 3 == 0) || (i % 5 == 0)).sum();
         System.out.println(result);
-    }
-
-    private void doOldWay() {
-        int add = 0;
-        for (int i = 1; i < 1000; i++) {
-            if (i % 3 == 0 || i % 5 == 0) {
-                add += i;
-            }
-        }
-        System.out.println(add);
     }
 
     public static void main(String[] args) {
