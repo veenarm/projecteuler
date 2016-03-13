@@ -1,3 +1,5 @@
+package me.jrkr.euler;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,10 +9,9 @@ import java.util.ArrayList;
 
 public class Problem13 {
 
-
     public static void main(String[] args) throws IOException {
-        InputStream bis = Problem13.class.getResourceAsStream("problem13.properties");
-        BufferedReader br = new BufferedReader(new InputStreamReader(bis, "UTF-8"));
+        InputStream is = Problem13.class.getResourceAsStream("Problem13.txt");
+        BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
         ArrayList<String> list = new ArrayList<>();
         br.lines().forEachOrdered(l -> list.add(l));
 

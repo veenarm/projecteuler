@@ -1,3 +1,5 @@
+package me.jrkr.euler;
+
 import com.ibm.icu.text.RuleBasedNumberFormat;
 
 import java.util.ArrayList;

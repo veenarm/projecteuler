@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+dependencies {
+    compile("com.ibm.icu:icu4j:56.1")
+}
+
+repositories {
+    maven {
+        url "http://repo1.maven.org/maven2"
+    }
+}
+
+compileJava {
+    sourceCompatibility = jdkVersion
+    targetCompatibility = jdkVersion
+}
+
+idea {
+    project {
+        languageLevel = jdkVersion
+    }
+}

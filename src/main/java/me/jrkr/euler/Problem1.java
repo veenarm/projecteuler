@@ -1,3 +1,5 @@
+package me.jrkr.euler;
+
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
