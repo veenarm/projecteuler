@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-public class Problem13 {
+public class Problem13 extends BaseProblem {
 
-    public static void main(String[] args) throws IOException {
+    public Problem13() throws IOException {
         InputStream is = Problem13.class.getResourceAsStream("Problem13.txt");
         BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
         ArrayList<String> list = new ArrayList<>();
@@ -19,7 +19,10 @@ public class Problem13 {
         for (String s : list) {
             bi = bi.add(new BigInteger(s));
         }
-
-        System.out.println(bi.toString().substring(0, 10));
+        stringResult = bi.toString().substring(0, 10);
+        System.out.println(stringResult);
+    }
+    public static void main(String[] args) throws IOException {
+        new Problem13();
     }
 }

@@ -9,20 +9,30 @@ import java.util.stream.IntStream;
  *
  * Answered 12-03-16 - 233168
  */
-public class Problem1 {
+public class Problem1 extends BaseProblem {
 
-    public static void main(String[] args) {
+    public Problem1() {
+        doOldWay();
+        doNewWay();
+    }
 
-        // Old standard way
+    // Java 8 - Streams/Lambdas
+    private void doNewWay() {
+        result = IntStream.range(1, 1000).filter(i -> (i % 3 == 0) || (i % 5 == 0)).sum();
+        System.out.println(result);
+    }
+
+    private void doOldWay() {
         int add = 0;
         for (int i = 1; i < 1000; i++) {
             if (i % 3 == 0 || i % 5 == 0) {
-                System.out.println(i);
                 add += i;
             }
         }
+        System.out.println(add);
+    }
 
-        // Java 8 - Streams/Lambdas
-        System.out.println(IntStream.range(1, 1000).filter(i -> (i % 3 == 0) || (i % 5 == 0)).sum());
+    public static void main(String[] args) {
+        new Problem1();
     }
 }

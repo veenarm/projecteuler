@@ -11,11 +11,10 @@ import java.util.stream.IntStream;
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  * Answered 12-03-16 - 4613732
  */
-public class Problem2 {
+public class Problem2 extends BaseProblem {
 
-    public static void main(String[] args) {
 
-        // Old standard way
+    public Problem2() {
         int[] values = new int[] {0, 1};
         int current = 0;
         int total = 0;
@@ -29,17 +28,12 @@ public class Problem2 {
             values[0] = current;
 
         } while (current <= 4000000);
-        System.out.println(total);
+        result = total;
+        System.out.println(result);
+    }
 
-//
-//        ArrayList<Integer> test = new ArrayList<>();
-//        test.add(0, 1);
-//        test.stream().
-//
-//        // Java 8 - Streams/Lambdas
-//        System.out.println(IntStream.range(1, 1000).filter(i -> (i % 3 == 0) || (i % 5 == 0)).sum());
-
-
+    public static void main(String[] args) {
+        new Problem2();
     }
 
 }

@@ -4,6 +4,8 @@ apply plugin: 'idea'
 
 dependencies {
     compile("com.ibm.icu:icu4j:56.1")
+
+    testCompile("junit:junit:4.12")
 }
 
 repositories {
